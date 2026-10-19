@@ -2,10 +2,10 @@ PPDB SMK Negeri 1 Bandung
 
 Website Penerimaan Peserta Didik Baru (PPDB) SMK Negeri 1 Bandung.
 
-Fitur
+Fitur Website
 
 - Halaman utama informasi PPDB.
-- Informasi jalur penerimaan.
+- Informasi jalur penerimaan siswa.
 - Registrasi dan login pengguna.
 - Formulir pendaftaran calon siswa.
 - Unggah dokumen persyaratan.
@@ -13,7 +13,7 @@ Fitur
 - Dashboard admin untuk memeriksa pendaftaran.
 - Pengumuman hasil seleksi.
 
-Teknologi
+Teknologi yang Digunakan
 
 - HTML
 - CSS
@@ -36,30 +36,43 @@ ppdbsmkn1bandung-byadlyzaidan/
 └── supabase/
     └── schema.sql
 
-Persiapan
+Persiapan Proyek
 
-1. Buat proyek Supabase.
-2. Jalankan isi "supabase/schema.sql" melalui SQL Editor Supabase pada proyek baru.
-3. Siapkan URL proyek dan publishable key atau anon key Supabase.
-4. Atur variabel lingkungan di Vercel:
+1. Buat proyek baru di Supabase.
+
+2. Buka menu SQL Editor di Supabase.
+
+3. Jalankan kode dari file "supabase/schema.sql" pada proyek Supabase yang baru.
+
+4. Siapkan URL proyek dan publishable key atau anon key Supabase.
+
+5. Masukkan variabel lingkungan berikut di pengaturan proyek Vercel:
+   
    - "VITE_SUPABASE_URL"
    - "VITE_SUPABASE_ANON_KEY"
-5. Hubungkan repositori GitHub ke Vercel.
-6. Gunakan perintah "npm run build" untuk menguji proses build.
 
-Menjalankan Secara Lokal
+6. Hubungkan repositori GitHub ke Vercel.
 
-Instal Node.js terlebih dahulu, lalu jalankan:
+7. Gunakan pengaturan build Vite untuk membangun website.
+
+Menjalankan Proyek Secara Lokal
+
+Pastikan Node.js sudah terpasang. Kemudian jalankan perintah berikut di terminal:
 
 npm install
 npm run dev
 
-Catatan Keamanan
+Untuk menguji proses build:
 
-- Jangan mengunggah file ".env" yang berisi rahasia ke GitHub.
+npm run build
+
+Keamanan
+
+- Jangan mengunggah file ".env" yang berisi informasi rahasia ke GitHub.
 - Jangan menaruh service role key atau secret key Supabase di kode frontend.
-- Uji autentikasi, hak akses, unggahan dokumen, dan alur seleksi sebelum digunakan secara resmi.
+- Atur Row Level Security (RLS) untuk melindungi data pendaftar.
+- Uji login, pendaftaran, unggah dokumen, dan akses admin sebelum website digunakan secara resmi.
 
 Status Proyek
 
-Proyek masih dalam tahap pengembangan dan memerlukan pengujian sebelum digunakan untuk penerimaan siswa secara resmi.
+Proyek ini masih dalam tahap pengembangan. Seluruh fitur perlu diuji dan diverifikasi sebelum digunakan untuk proses penerimaan peserta didik baru secara resmi.
