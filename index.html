@@ -1,0 +1,256 @@
+
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Sistem Penerimaan Murid Baru SMK Negeri 1 Bandung"
+  />
+  <meta name="theme-color" content="#123f85" />
+  <title>PPDB SMK Negeri 1 Bandung</title>
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="Beranda PPDB">
+        <span class="brand-logo">S1</span>
+        <span class="brand-text">
+          <strong>PPDB SMK Negeri 1 Bandung</strong>
+          <small>Sistem Penerimaan Murid Baru</small>
+        </span>
+      </a>
+      <nav class="header-nav">
+        <a href="#beranda">Beranda</a>
+        <a href="#jalur">Jalur Pendaftaran</a>
+        <a href="#informasi">Informasi</a>
+        <button id="auth-nav-button" class="btn btn-primary">
+          Masuk / Daftar
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="app">
+    <section id="beranda" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="eyebrow">TAHUN AJARAN 2026/2027</span>
+          <h1>Wujudkan Masa Depanmu Bersama SMK Negeri 1 Bandung</h1>
+          <p>
+            Selamat datang di portal Penerimaan Murid Baru.
+            Daftar, lengkapi dokumen, dan pantau status pendaftaran
+            melalui satu sistem.
+          </p>
+          <div class="hero-actions">
+            <button id="hero-register-button" class="btn btn-primary">
+              Mulai Pendaftaran
+            </button>
+            <a href="#jalur" class="btn btn-outline">Lihat Jalur</a>
+          </div>
+          <div class="hero-note">
+            <span class="status-dot"></span>
+            Portal informasi dan pendaftaran online
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-card-top">
+            <span class="hero-icon">🎓</span>
+            <span class="pill">Portal PPDB</span>
+          </div>
+          <h2>Langkah Pendaftaran</h2>
+          <ol class="steps">
+            <li>
+              <span>1</span>
+              <div>
+                <strong>Buat akun</strong>
+                <p>Daftar menggunakan email aktif.</p>
+              </div>
+            </li>
+            <li>
+              <span>2</span>
+              <div>
+                <strong>Lengkapi formulir</strong>
+                <p>Isi identitas dan pilih jalur.</p>
+              </div>
+            </li>
+            <li>
+              <span>3</span>
+              <div>
+                <strong>Unggah dokumen</strong>
+                <p>Lengkapi berkas persyaratan.</p>
+              </div>
+            </li>
+            <li>
+              <span>4</span>
+              <div>
+                <strong>Pantau hasil</strong>
+                <p>Cek status melalui dashboard.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section id="jalur" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">PILIH JALUR</span>
+          <h2>Jalur Pendaftaran</h2>
+          <p>
+            Pilih jalur yang sesuai dengan ketentuan resmi penerimaan.
+            Persyaratan dan kuota harus mengikuti kebijakan yang berlaku.
+          </p>
+        </div>
+        <div id="tracks-container" class="track-grid">
+          <article class="track-card">
+            <span class="track-icon">📍</span>
+            <h3>Zonasi</h3>
+            <p>Jalur berdasarkan ketentuan wilayah domisili.</p>
+          </article>
+          <article class="track-card">
+            <span class="track-icon">🏆</span>
+            <h3>Prestasi</h3>
+            <p>Jalur berdasarkan prestasi sesuai persyaratan.</p>
+          </article>
+          <article class="track-card">
+            <span class="track-icon">🤝</span>
+            <h3>Afirmasi</h3>
+            <p>Jalur bagi calon murid yang memenuhi kriteria afirmasi.</p>
+          </article>
+        </div>
+        <p class="notice">
+          Catatan: nama jalur, kuota, jadwal, dan persyaratan di atas
+          merupakan contoh awal. Sesuaikan dengan pengumuman resmi sekolah
+          dan ketentuan penerimaan murid baru tahun berjalan.
+        </p>
+      </div>
+    </section>
+
+    <section id="informasi" class="section section-soft">
+      <div class="container info-grid">
+        <div>
+          <span class="eyebrow">INFORMASI</span>
+          <h2>Informasi Penerimaan</h2>
+          <p>
+            Informasi terbaru yang diterbitkan panitia akan ditampilkan
+            di bagian ini setelah layanan database terhubung.
+          </p>
+        </div>
+        <div id="announcements-container" class="announcement-list">
+          <div class="empty-state">
+            <strong>Pengumuman PPDB</strong>
+            <p>Pengumuman akan ditampilkan setelah sistem terhubung.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="auth-section" class="section auth-section" hidden>
+      <div class="container auth-container">
+        <div class="section-heading">
+          <span class="eyebrow">AKSES PORTAL</span>
+          <h2 id="auth-title">Masuk ke Portal PPDB</h2>
+          <p id="auth-description">
+            Masuk atau buat akun untuk melanjutkan pendaftaran.
+          </p>
+        </div>
+
+        <div class="auth-card">
+          <div class="auth-tabs">
+            <button id="login-tab" class="auth-tab active" type="button">
+              Masuk
+            </button>
+            <button id="register-tab" class="auth-tab" type="button">
+              Daftar Akun
+            </button>
+          </div>
+
+          <form id="auth-form">
+            <div id="register-name-field" class="form-group" hidden>
+              <label for="auth-name">Nama lengkap</label>
+              <input
+                id="auth-name"
+                name="full_name"
+                type="text"
+                autocomplete="name"
+                placeholder="Nama sesuai dokumen"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="auth-email">Email aktif</label>
+              <input
+                id="auth-email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                placeholder="nama@email.com"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="auth-password">Kata sandi</label>
+              <input
+                id="auth-password"
+                name="password"
+                type="password"
+                autocomplete="current-password"
+                minlength="8"
+                placeholder="Minimal 8 karakter"
+                required
+              />
+            </div>
+
+            <button id="auth-submit-button" class="btn btn-primary btn-full">
+              Masuk
+            </button>
+            <p id="auth-message" class="form-message" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="dashboard-section" class="section" hidden>
+      <div class="container">
+        <div class="dashboard-header">
+          <div>
+            <span class="eyebrow">DASHBOARD</span>
+            <h2 id="dashboard-title">Dashboard</h2>
+            <p id="dashboard-welcome"></p>
+          </div>
+          <button id="logout-button" class="btn btn-outline" type="button">
+            Keluar
+          </button>
+        </div>
+
+        <div id="dashboard-content"></div>
+      </div>
+    </section>
+
+    <div id="toast-container" class="toast-container" aria-live="polite"></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>PPDB SMK Negeri 1 Bandung</strong>
+        <p>Portal penerimaan murid baru online.</p>
+      </div>
+      <p>© 2026 · Portal PPDB</p>
+    </div>
+    <div class="container footer-disclaimer">
+      Portal ini merupakan rancangan sistem. Pastikan identitas sekolah,
+      jadwal, persyaratan, dan pengumuman diverifikasi oleh pihak sekolah
+      sebelum digunakan secara resmi.
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
